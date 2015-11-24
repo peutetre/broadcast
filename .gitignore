@@ -1,0 +1,10 @@
+app
+project/bin/settings.json
+project/www/main.js
+project/node_modules
+private.json
+server/_settings.js
+cert.pem
+key.pem
+pushdemo.mobileprovision
+node_modules

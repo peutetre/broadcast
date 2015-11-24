@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BROADCAST</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width = device-width, height=device-height, initial-scale = 1, user-scalable = no, minimal-ui">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" media="(device-height: 568px)">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * 'unsafe-inline';">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <div class="view" id="dashboard-view">
+            <div class="header">
+                <button id="clear-btn" name="clear">Clear</button>
+                <h2>BROADCAST</h2>
+            </div>
+            <div class="actionForm">
+                <input type="text" id="msgText" name="msgText" placeholder="Message"/>
+                <button id="sendBtn" name="send">Send</button>
+            </div>
+            <ul id="msgListId" class="msgList"></ul>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

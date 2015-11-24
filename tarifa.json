@@ -1,0 +1,118 @@
+{
+  "name": "broadcast",
+  "id": "com.fortytwoloops.broadcast",
+  "description": "very simple broadcast",
+  "version": "1.0.0",
+  "platforms": [
+    "ios@3.9.0",
+    "android@4.1.1"
+  ],
+  "configurations_mixins": {
+    "default": {
+      "hostname": "FIXME",
+      "port": "FIXME",
+      "drawableName": "notif",
+      "iconColor": "#6374D9",
+      "id": "com.fortytwoloops.pushdemo",
+      "product_name": "Broadcast",
+      "product_file_name": "broadcast"
+    }
+  },
+  "configurations": {
+    "ios": {
+      "default": {
+        "extend": "default",
+        "sign": "push"
+      }
+    },
+    "android": {
+      "default": {
+        "extend": "default",
+        "min_sdk_version": 19
+      }
+    }
+  },
+  "cordova": {
+    "settings": {
+      "ios": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "preferences": {
+      "DisallowOverscroll": true,
+      "EnableViewportScale": false,
+      "KeyboardDisplayRequiresUserAction": false,
+      "ShowSplashScreenSpinner": false,
+      "SplashScreen": "screen",
+      "BackgroundColor": "0xffffffff",
+      "AutoHideSplashScreen": false,
+      "KeepRunning": true,
+      "Orientation": "portrait",
+      "StatusBarStyle": "lightcontent"
+    },
+    "whitelist": {
+      "shared": [
+        {
+          "type": "access-origin",
+          "origin": [
+            "*"
+          ]
+        },
+        {
+          "type": "allow-intent",
+          "origin": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ]
+        }
+      ],
+      "android": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "market:*"
+          ]
+        },
+        {
+          "type": "allow-navigation",
+          "origin": [
+            "*"
+          ]
+        }
+      ],
+      "ios": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "itms:*",
+            "itms-apps:*"
+          ]
+        }
+      ]
+    }
+  },
+  "author": {
+    "name": "Paul Panserrieu",
+    "email": "paul@42loops.com",
+    "href": "http://42loops.com"
+  },
+  "check": {
+    "ios": "./project/bin/check_ios.js",
+    "android": "./project/bin/check_android.js"
+  },
+  "plugins": {
+    "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@2.1.0",
+    "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.1.0",
+    "cordova-plugin-inappbrowser": "cordova-plugin-inappbrowser@1.0.1",
+    "phonegap-plugin-push": "phonegap-plugin-push@1.3.0",
+    "ionic-plugin-keyboard": "ionic-plugin-keyboard@1.0.7",
+    "cordova-plugin-statusbar": "cordova-plugin-statusbar@1.0.1",
+    "cordova-plugin-x-toast": "cordova-plugin-x-toast@2.2.1"
+  }
+}
